@@ -1,0 +1,48 @@
+
+#grid {
+    border: 2px solid black; 
+    display: flex;
+   /* flex-direction: row; */
+   flex-wrap: wrap;
+   justify-content: center;
+   position: relative;
+   /* height: 600px; */
+   width: 800px;
+   aspect-ratio: 1;
+
+.cell {
+    border: 1px solid black;
+    background-color: lightgray;
+    height: 6%;
+    width: 6%;
+    flex: 1 1 6%;
+    aspect-ratio: 1;
+    /* box-sizing: border-box; */
+
+}
+
+.pink {
+    border: 1px solid black;
+    background-color: pink;
+    height: 6%;
+    width: 6%;
+    flex: 1 1 6%;
+    aspect-ratio: 1;
+    /* box-sizing: border-box; */
+}
+/* 
+.cell::before {
+    content: '';
+    display: block; 
+    padding-top: 100%;
+} */
+
+/* .cell:hover {
+    background-color: pink;
+} */
+
+@media screen and(max-width: 900px) {
+    #grid {
+        width: 400px;
+    }
+}
