@@ -19,15 +19,27 @@ for (let i = 0; i < rows; i++) {
 //         dgfkjfshgfsjgh
 //     })
 // })
-// const hoverPink = document.querySelector(".cell:hover");
-
-let cellItem = document.querySelectorAll(".cell");
 
 
-let mouseEvent = () => {
-    document.cellItem.style.backgroundColor = "pink";
+
+
+
+// let mouseEvent = () => {
+//     document.cellItem.style.backgroundColor = "pink";
+// }
+
+// cellItem.forEach((item) => {
+//     item.addEventListener("mouseover", mouseEvent)
+// });
+
+function pink(e) {
+    // console.log(this === e.currentTarget);
+    // console.log(this === e.target);
+    this.style.backgroundColor = "pink";
 }
 
-cellItem.forEach((item) => {
-    item.addEventListener("mouseover", mouseEvent)
-});
+let cellItems = document.querySelectorAll(".cell");
+
+for (const cellItem of cellItems) {
+    cellItem.addEventListener("mouseover", pink, false);
+}
