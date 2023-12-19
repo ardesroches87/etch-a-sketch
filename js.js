@@ -12,15 +12,22 @@ for (let i = 0; i < rows; i++) {
 }
 }
 
+
+
+// cellItem.forEach(function (i) {
+//     i.addEventListener("mouseover", function() {
+//         dgfkjfshgfsjgh
+//     })
+// })
 // const hoverPink = document.querySelector(".cell:hover");
 
-const cellItem = document.querySelector(".cell");
+let cellItem = document.querySelectorAll(".cell");
 
 
-// function stayPink () {
-//     cell.style.cssText = "background-color: pink;"
-// }
+let mouseEvent = () => {
+    document.cellItem.style.backgroundColor = "pink";
+}
 
-cellItem.addEventListener("mouseover", () => {
-    cellItem.classList.replace("pink", "cell");
+cellItem.forEach((item) => {
+    item.addEventListener("mouseover", mouseEvent)
 });
