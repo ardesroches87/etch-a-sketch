@@ -9,15 +9,17 @@
    /* height: 600px; */
    width: 800px;
    aspect-ratio: 1;
+}
+
 
 .cell {
     border: 1px solid black;
     /* background-color: lightgray; */
-    height: 6%;
-    width: 6%;
-    flex: 1 1 6%;
+    /* max-height: 6%;
+    max-width: 6%; 
+    flex: 1; */
     aspect-ratio: 1;
-    /* box-sizing: border-box; */
+    box-sizing: border-box;
 
 }
 
@@ -30,12 +32,12 @@
     aspect-ratio: 1; */
     /* box-sizing: border-box; */
 }
-/* 
+
 .cell::before {
     content: '';
     display: block; 
     padding-top: 100%;
-} */
+}
 
 /* .cell:hover {
     background-color: pink;
