@@ -9,6 +9,24 @@
 </head>
 <body>
     <div id="header">Etch-a-Sketch</div>
+    <button class="btn" id="reset">Reset 16x16</button>
+    <!-- <button class="btn" id="size">Set New Size</button> -->
+    <div class="dropdown">
+      <button class="dropbtn">Select number of pixels</button>
+      <div class="drop-content">
+            <p id="32">32x32</p>
+            <p id="48">48x48</p>
+            <p id="64">64x64</p>
+            <p id="80">80x80</p>
+            <p id="96">96x96</p>
+      </div>
+    </div>  
+    <div class="color-choice">
+        <button class="color-btn" id="black">Black</button>
+        <button class="color-btn" id="pink">Pink</button>
+        <button class="color-btn" id="blue">Blue</button>
+        <button class="color-btn" id="rainbow">Rainbow</button>
+    </div>
     <div id="grid"></div>
 <script src="js.js"></script>    
 </body>

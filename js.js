@@ -1,45 +1,82 @@
-const rows = 16;
-const columns = 16;
+const container = document.querySelector("#grid");
+let gridNum = 0;
 
-const grid = document.querySelector("#grid");
 
-for (let i = 0; i < rows; i++) {
-    for (let j = 0; j < columns; j++) {
-        const cell = document.createElement("div");
-        cell.classList.add("cell");
-        // cell.textContent = "sup";
-        grid.appendChild(cell);
+function makeGrid (gridNum) {
+
+    container.replaceChildren();
+
+    for (let i = 0; i < gridNum; i++) {
+        const divRow = document.createElement("div");
+        divRow.classList.add("div-row");
+        
+
+        for (let j = 0; j < gridNum; j++) {
+            const cells = document.createElement("div");
+            cells.classList.add("div-cell");
+            divRow.appendChild(cells);
+        }
+        
+        container.appendChild(divRow);
+    }
+    
 }
-}
 
+makeGrid(16);
 
+changeColor();
 
-// cellItem.forEach(function (i) {
-//     i.addEventListener("mouseover", function() {
-//         dgfkjfshgfsjgh
-//     })
-// })
-
-
-
-
-
-// let mouseEvent = () => {
-//     document.cellItem.style.backgroundColor = "pink";
+// function changeColor () {
+// function pink(e) {
+//     // console.log(this === e.currentTarget);
+//     // console.log(this === e.target);
+//     this.style.backgroundColor = "pink";
 // }
 
-// cellItem.forEach((item) => {
-//     item.addEventListener("mouseover", mouseEvent)
-// });
+let cellItems = document.querySelectorAll(".div-cell");
 
-function pink(e) {
-    // console.log(this === e.currentTarget);
-    // console.log(this === e.target);
+// for (const cellItem of cellItems) {
+//     cellItem.addEventListener("mouseover", pink, false);
+// } 
+// }
+
+//add eventlistener for pink button being clicked, which will then set off eventlistener of mouseover turning that color
+
+
+
+function changeColor() {
+let colorChoice = document.querySelector(".color-btn");
+let black = document.querySelector("#black");
+let pink = document.querySelector("#pink");
+let blue = document.querySelector("#blue");
+colorChoice.addEventListener("click", function(e) {
+ if (e.currentTarget.id == "black") {
+  cellItems.style.backgroundColor = "black";
+ } else if (e.currentTarget.id == "pink") {
     this.style.backgroundColor = "pink";
+ } else if (e.currentTarget.id == "blue") {
+    this.style.backgroundColor = "blue";
+ } 
+}
+)
 }
 
-let cellItems = document.querySelectorAll(".cell");
+//Reset Button
+let reset = document.querySelector("#reset");
 
-for (const cellItem of cellItems) {
-    cellItem.addEventListener("mouseover", pink, false);
-}
+reset.addEventListener("click", () => {
+    makeGrid(16);
+});
+
+
+
+
+
+
+//New Size Button
+// let size = document.querySelector("#size");
+
+// size.addEventListener("click", () => {
+//     let newSize = (prompt("Enter a number between 16 and 100"));
+//     makeGrid(newSize);
+// });
