@@ -26,7 +26,7 @@ function makeGrid (gridNum) {
     let cellItems = document.querySelectorAll(".div-cell");
 
     function pink(e) {
-      this.style.backgroundColor = "pink";
+      this.style.backgroundColor = "indigo";
     }
     for (const cellItem of cellItems) {
       cellItem.addEventListener("mouseover", pink, false);
