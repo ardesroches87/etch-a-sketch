@@ -1,8 +1,22 @@
- #grid {
+@font-face {
+    font-family: 'pixelify_sansregular';
+    src: url('fonts/font1.woff format') format('woff'),
+         url('fonts/font2.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+#header {
+    font-family: 'pixelify_sansregular';
+}
+
+#grid {
 display: flex;
-height: 600px;
-width: 600px;
+height: 550px;
+width: 550px;
 border: 2px solid black;
+margin: 50px auto;
 }
 
 .div-row {
@@ -15,6 +29,14 @@ flex: 1;
 flex: 1;
 border: 1px solid black;
 }  
+
+.blk {
+    background-color: black;
+}
+
+.pnk {
+    background-color: pink;
+}
 
 .dropbtn {
     background-color: rgb(134, 51, 120);
@@ -54,4 +76,11 @@ display: inline-block;
 
 .dropdown:hover .dropbtn {
     background-color:rgb(160, 124, 219);
+}
+
+@media screen and (max-width: 450px) {
+    #grid {
+        height: 300px;
+        width: 300px;
+    }
 }
